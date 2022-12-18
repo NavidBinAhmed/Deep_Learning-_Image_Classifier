@@ -1,1 +1,1 @@
-web: gunicorn app:main
+web: gunicorn a2model_webapp:master

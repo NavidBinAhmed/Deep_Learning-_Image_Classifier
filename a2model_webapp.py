@@ -1,5 +1,4 @@
 from __future__ import division, print_function
-# coding=utf-8
 import sys
 import os
 import glob
@@ -16,18 +15,13 @@ from keras.preprocessing import image
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 
-# from gevent.pywsgi import WSGIServer
-
 # Define a flask app
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
 modelpath = 'a2model_resnet50.h5'
 
-# import os
-# MODEL_PATH = os.path.join(os.path.dirname(__file__), "a2model_resnet50.h5")
-
-# Load your trained model
+# Loading trained model
 model = load_model(modelpath)
 
 
@@ -37,13 +31,11 @@ def model_predict(img_path, model):
     # Preprocessing the image
     x = image.img_to_array(img)
     # x = np.true_divide(x, 255)
+    
     ## Scaling
     x=x/255
     x = np.expand_dims(x, axis=0)
    
-
-   
-
     prediction = model.predict(x)
     prediction=np.argmax(prediction, axis=1)
     if prediction==0:
@@ -82,7 +74,6 @@ def upload():
         result=prediction
         return result
     return None
-
 
 if __name__ == '__main__':
     app.run(debug=True)
