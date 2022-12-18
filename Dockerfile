@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN mkdir/a2model_webapp
+RUN mkdir /a2model_webapp
 WORKDIR /a2model_webapp
 
 COPY requirements.txt requirements.txt
