@@ -1,6 +1,13 @@
 FROM python:3.9
-COPY . /webapp
-WORKDIR /webapp
+
+RUN mkdir/ImagePrediction
+WORKDIR /ImagePrediction
+
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+
+COPY . .
+
 EXPOSE $PORT
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT a2model_webapp:a2model_webapp
+
+CMD flask run --host=0.0.0.0 --port=5000
