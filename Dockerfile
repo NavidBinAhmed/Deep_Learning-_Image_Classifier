@@ -1,7 +1,7 @@
 FROM python:3.9
 
 RUN mkdir/a2model_webapp
-WORKDIR /ImagePrediction
+WORKDIR /2model_webapp
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
