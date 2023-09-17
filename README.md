@@ -1,6 +1,6 @@
 CNN-based Image detection system
 
-copyright @navidbinahmed 2022
+copyright @navidbinahmed 2023
 
 
 ## steps 
