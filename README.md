@@ -27,7 +27,7 @@ copyright @navidbinahmed 2023
          
 
 ## tools and tech used
-[![](https://skillicons.dev/icons?i=python,pytorch,docker&theme=light)](https://skillicons.dev)
+[![](https://skillicons.dev/icons?i=python,pytorch,docker&theme=dark)](https://skillicons.dev)
 1. Jupyter Notebook & Anaconda
 2. VS Code
 3. Docker Desktop
