@@ -1,4 +1,6 @@
-CNN-based Image detection system
+# Overview
+This repository contains a CNN-based image detection system.
+The system recognises the object in an image uploaded by the user.
 
 copyright @navidbinahmed 2023
 
